@@ -1,16 +1,13 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/MasterPage.master" AutoEventWireup="true" CodeFile="index.aspx.cs" Inherits="View_index" %>
 
 <%-- Add content controls here --%>
-<asp:Content ID="Content1" runat="server" contentplaceholderid="ContentPlaceHolder1">
-     <div class="hero-wrap js-fullheight" style="background-image: url('images/bg_1.jpg');">
-      <div class="overlay"></div>
-      <div class="container">
-        <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-start" data-scrollax-parent="true">
-          <div class="col-md-10 ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
-            <h1 class="mb-4" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><strong>Explore <br></strong> Singapore Today!</h1>
-            <!--<p data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Find great places to stay, eat, shop, or visit from local experts</p>-->
-            <div class="block-17 my-4">
-              <form runat="server" class="d-block d-flex">
+
+<asp:Content ID="Content1" ContentPlaceHolderID="Title" runat="server">
+    Explore<br /> Singapore Today
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="topHeader" runat="server">
+    <div class="block-17 my-4">
+              <div class="d-block d-flex">
                 <div class="fields d-block d-flex">
                   <div class="select-wrap one-third">
                     <div class="icon"><span class="ion-ios-arrow-down"></span></div>
@@ -31,17 +28,19 @@
 				
                 </div>
                 <input type="submit" class="search-submit btn btn-primary" value="Search"> 			
-              
+              </div>
             </div>
 			<input type="checkbox" name="vehicle" value="Bike"> Direct Flight Only<br>
 			
 			<br><br>
-			</form>
+    
+</asp:Content>
+
+   <asp:Content ID="Content3" ContentPlaceHolderID="homeContent" runat="server">
+   
+  
  
-          </div>
-        </div>
-      </div>
-    </div>
+
 
     
     <section class="ftco-section ftco-destination">
