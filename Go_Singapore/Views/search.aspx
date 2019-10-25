@@ -7,5 +7,5 @@
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="homeContent" runat="server">
-    test
+    <h1>Wyman is single</h1>
 </asp:Content>
