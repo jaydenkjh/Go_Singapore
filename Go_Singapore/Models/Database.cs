@@ -9,7 +9,8 @@ namespace Go_Singapore.Models
 {
     public static class Database
     {
-        static SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\v11.0;AttachDbFilename=|DataDirectory|\GoSingaporeDB.mdf;Integrated Security=True;");
+        
+        static SqlConnection con = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\GoSingaporeDB.mdf;Integrated Security = True;");
 
         //Read data from database
         public static DataTable getTable(string sql)

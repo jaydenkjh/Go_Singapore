@@ -1,5 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/MasterPage.master" AutoEventWireup="true" CodeBehind="index.aspx.cs" Inherits="Go_Singapore.Views.index1" %>
 <%-- Add content controls here --%>
+<%@ Import Namespace="System.Data" %>
+<%@ Import Namespace="Go_Singapore.Controllers" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="Title" runat="server">
     Explore<br /> Singapore Today
@@ -105,11 +107,23 @@
     		<div class="row">
     			<div class="col-md-12">
     				<div class="destination-slider owl-carousel ftco-animate">
+                        <%
+                            SuggestionManager sm = new SuggestionManager();
+                            DataTable dt = sm.GetFullSuggestionList();
+                            foreach(DataRow row in dt.Rows)
+                            {
+                                Response.Write("<div class='item'><div class='destination'>");
+                                Response.Write("<div class='img d-flex justify-content-center align-items-center' style='background-image: url(images/attractions/" + row["image"].ToString() + ");'></div>");
+                                Response.Write("<div class='text p-3'><h3>" + row["name"].ToString() + "</h3></div></div></div>");
+                            }
+
+                            %>
+
     					<div class="item">
 		    				<div class="destination">
-		    					<a href="#" class="img d-flex justify-content-center align-items-center" style="background-image: url(images/destination-1.jpg);">
+		    					<div class="img d-flex justify-content-center align-items-center" style="background-image: url(images/attractions/" + row.");">
 		    						
-		    					</a>
+		    					</div>
 		    					<div class="text p-3">
 		    						<h3><a href="#">Paris, Singapore</a></h3>
 		    						<span class="listing">15 Listing</span>

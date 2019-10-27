@@ -102,6 +102,13 @@
     <Content Include="Views\fonts\ionicons\fonts\ionicons.svg" />
     <Content Include="Views\fonts\open-iconic\open-iconic.svg" />
     <Content Include="Views\images\about.jpg" />
+    <Content Include="Views\images\attractions\chinatown.jpg" />
+    <Content Include="Views\images\attractions\clarkequay.jpg" />
+    <Content Include="Views\images\attractions\flyer.jpg" />
+    <Content Include="Views\images\attractions\gardenbythebay.jpg" />
+    <Content Include="Views\images\attractions\sentosa.jpg" />
+    <Content Include="Views\images\attractions\uss.jpg" />
+    <Content Include="Views\images\attractions\zoo.jpg" />
     <Content Include="Views\images\bg_1.jpg" />
     <Content Include="Views\images\bg_2.jpg" />
     <Content Include="Views\images\bg_3.jpg" />
@@ -177,6 +184,7 @@
     <Compile Include="Controllers\APIs.cs" />
     <Compile Include="Models\Database.cs" />
     <Compile Include="Models\SearchEntity.cs" />
+    <Compile Include="Models\SuggestionEntity.cs" />
     <Compile Include="Models\UserEntity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Views\about.aspx.cs">
