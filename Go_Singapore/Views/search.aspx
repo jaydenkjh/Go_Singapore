@@ -7,5 +7,22 @@
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="homeContent" runat="server">
-    <h1>Wyman is single</h1>
+    <div class="row">
+        <div class="col-md-9">
+    <h1>Search Results</h1>
+            </div>
+        <div class="col-md-3 align-content-center text-center">
+            Currency : 
+            <asp:DropDownList Width="100%" ID="DDLCurrency" CssClass="btn btn-danger btn-sm" runat="server"></asp:DropDownList>
+        </div>
+    </div>
+
+
+
+
+
+    
+
+	
+
 </asp:Content>
