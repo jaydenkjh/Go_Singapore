@@ -44,6 +44,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -71,6 +74,7 @@
     <Content Include="App_Data\GoSingaporeDB_log.ldf">
       <DependentUpon>GoSingaporeDB.mdf</DependentUpon>
     </Content>
+    <Content Include="Views\about.aspx" />
     <Content Include="Views\css\ajax-loader.gif" />
     <Content Include="Views\css\animate.css" />
     <Content Include="Views\css\aos.css" />
@@ -159,25 +163,46 @@
     <Content Include="Views\js\popper.min.js" />
     <Content Include="Views\js\range.js" />
     <Content Include="Views\js\scrollax.min.js" />
+    <Content Include="Views\search.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\APIManager.cs" />
+    <Compile Include="Controllers\CountryMatcher.cs" />
+    <Compile Include="Controllers\Email.cs" />
     <Compile Include="Controllers\LoginManager.cs" />
     <Compile Include="Controllers\ResultManager.cs" />
     <Compile Include="Controllers\SuggestionManager.cs" />
     <Compile Include="Controllers\SystemManager.cs" />
+    <Compile Include="Controllers\APIs.cs" />
     <Compile Include="Models\Database.cs" />
     <Compile Include="Models\SearchEntity.cs" />
     <Compile Include="Models\UserEntity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\about.aspx.cs">
+      <DependentUpon>about.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\about.aspx.designer.cs">
+      <DependentUpon>about.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Views\index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="Views\index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Views\MasterPage.master.cs">
       <DependentUpon>MasterPage.master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\search.aspx.cs">
+      <DependentUpon>search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\search.aspx.designer.cs">
+      <DependentUpon>search.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

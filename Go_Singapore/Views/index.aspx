@@ -42,14 +42,50 @@
          .weatherBox{
              height:200px;border:1px solid black;
          }
+         .weatherBox i{
+             font-size:120px;
+         }
+         .weatherBox img{
+             height:140px;
+             width:140px;
+         }
+         .weatherBox .boxTitle
+         {
+             font-size:15px;
+             font-weight:bold;
+         }
      </style>
-       <div class="row ftco-animate">
-           <div class="weatherBox col-lg-2"></div>
-           <div class="weatherBox col-lg-2"></div>
-           <div class="weatherBox col-lg-2"></div>
-           <div class="weatherBox col-lg-2"></div>
-           <div class="weatherBox col-lg-2"></div>
-           <div class="weatherBox col-lg-2"></div>
+       <div class="row ftco-animate align-content-center text-center">
+           <div class="weatherBox col-lg-2">
+               <asp:Label ID="lblDay1" CssClass="boxTitle" runat="server" Text="Day1"></asp:Label><br />
+               <i ID="I1" class="" runat="server"></i><br />
+               <asp:Label ID="lblCondition1" runat="server" Text="Condition1"></asp:Label>
+           </div>
+           <div class="weatherBox col-lg-2">
+               <asp:Label ID="lblDay2" CssClass="boxTitle" runat="server" Text="Day1"></asp:Label><br />
+               <i ID="I2" class="" runat="server"></i><br />
+               <asp:Label ID="lblCondition2" runat="server" Text="Condition1"></asp:Label>
+           </div>
+           <div class="weatherBox col-lg-2">
+               <asp:Label ID="lblDay3" CssClass="boxTitle" runat="server" Text="Day1"></asp:Label><br />
+               <i ID="I3" class="" runat="server"></i><br />
+               <asp:Label ID="lblCondition3" runat="server" Text="Condition1"></asp:Label>
+           </div>
+           <div class="weatherBox col-lg-2">
+               <asp:Label ID="lblDay4" CssClass="boxTitle" runat="server" Text="Day1"></asp:Label><br />
+               <i ID="I4" class="" runat="server"></i><br />
+               <asp:Label ID="lblCondition4" runat="server" Text="Condition1"></asp:Label>
+           </div>
+           <div class="weatherBox col-lg-2">
+               <asp:Label ID="lblDay5" CssClass="boxTitle" runat="server" Text="Day1"></asp:Label><br />
+               <i ID="I5" class="" runat="server"></i><br />
+               <asp:Label ID="lblCondition5" runat="server" Text="Condition1"></asp:Label>
+           </div>
+           <div class="weatherBox col-lg-2">
+               <asp:Label ID="lblDay6" CssClass="boxTitle" runat="server" Text="Day1"></asp:Label><br />
+               <i ID="I6" class="" runat="server"></i><br />
+               <asp:Label ID="lblCondition6" runat="server" Text="Condition1"></asp:Label>
+           </div>
 
 
        </div>
