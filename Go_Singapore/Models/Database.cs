@@ -9,7 +9,7 @@ namespace Go_Singapore.Models
 {
     public static class Database
     {
-        
+
         static SqlConnection con = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\GoSingaporeDB.mdf;Integrated Security = True;");
 
         //Read data from database
@@ -17,7 +17,10 @@ namespace Go_Singapore.Models
         {
             DataTable results = null;
             SqlCommand cmd = new SqlCommand(sql, con);
-            con.Open();
+            if (con.State == ConnectionState.Closed)
+            {
+                con.Open();
+            }
             SqlDataReader reader = cmd.ExecuteReader();
             if (reader.Read())
             {
@@ -25,7 +28,7 @@ namespace Go_Singapore.Models
                 results.Load(reader);
             }
             reader.Close();
-           // con.Close();
+            // con.Close();
 
             return results;
         }
@@ -33,11 +36,14 @@ namespace Go_Singapore.Models
         public static int ExecuteSQLCommand(string sql)
         {
             SqlCommand cmd = new SqlCommand(sql, con);
-            con.Open();
+            if (con.State == ConnectionState.Closed)
+            {
+                con.Open();
+            }
             int result = cmd.ExecuteNonQuery();
             return result;
         }
 
-             
+
     }
 }
