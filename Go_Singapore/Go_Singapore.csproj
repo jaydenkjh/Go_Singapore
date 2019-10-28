@@ -178,12 +178,14 @@
     <Compile Include="Controllers\APIManager.cs" />
     <Compile Include="Controllers\CountryMatcher.cs" />
     <Compile Include="Controllers\Email.cs" />
+    <Compile Include="Controllers\ItineraryManager.cs" />
     <Compile Include="Controllers\LoginManager.cs" />
     <Compile Include="Controllers\ResultManager.cs" />
     <Compile Include="Controllers\SuggestionManager.cs" />
     <Compile Include="Controllers\SystemManager.cs" />
     <Compile Include="Controllers\APIs.cs" />
     <Compile Include="Models\Database.cs" />
+    <Compile Include="Models\ItineraryEntity.cs" />
     <Compile Include="Models\SearchEntity.cs" />
     <Compile Include="Models\SuggestionEntity.cs" />
     <Compile Include="Models\UserEntity.cs" />
