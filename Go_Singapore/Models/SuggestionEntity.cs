@@ -14,6 +14,6 @@ namespace Go_Singapore.Models
             string sql = "SELECT * FROM Attractions";
             dt = Database.getTable(sql);
             return dt;
-        }
+        } 
     }
 }

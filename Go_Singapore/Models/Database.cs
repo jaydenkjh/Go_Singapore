@@ -25,12 +25,19 @@ namespace Go_Singapore.Models
                 results.Load(reader);
             }
             reader.Close();
-            con.Close();
+           // con.Close();
 
             return results;
         }
 
-        //
+        public static int ExecuteSQLCommand(string sql)
+        {
+            SqlCommand cmd = new SqlCommand(sql, con);
+            con.Open();
+            int result = cmd.ExecuteNonQuery();
+            return result;
+        }
+
              
     }
 }
