@@ -119,82 +119,7 @@
 
                             %>
 
-    					<div class="item">
-		    				<div class="destination">
-		    					<div class="img d-flex justify-content-center align-items-center" style="background-image: url(images/attractions/" + row.");">
-		    						
-		    					</div>
-		    					<div class="text p-3">
-		    						<h3><a href="#">Paris, Singapore</a></h3>
-		    						<span class="listing">15 Listing</span>
-		    					</div>
-		    				</div>
-	    				</div>
-	    				<div class="item">
-		    				<div class="destination">
-		    					<a href="#" class="img d-flex justify-content-center align-items-center" style="background-image: url(images/destination-2.jpg);">
-		    						<div class="icon d-flex justify-content-center align-items-center">
-		    							<span class="icon-search2"></span>
-		    						</div>
-		    					</a>
-		    					<div class="text p-3">
-		    						<h3><a href="#">San Francisco, USA</a></h3>
-		    						<span class="listing">20 Listing</span>
-		    					</div>
-		    				</div>
-	    				</div>
-	    				<div class="item">
-		    				<div class="destination">
-		    					<a href="#" class="img d-flex justify-content-center align-items-center" style="background-image: url(images/destination-3.jpg);">
-		    						<div class="icon d-flex justify-content-center align-items-center">
-		    							<span class="icon-search2"></span>
-		    						</div>
-		    					</a>
-		    					<div class="text p-3">
-		    						<h3><a href="#">Lodon, UK</a></h3>
-		    						<span class="listing">10 Listing</span>
-		    					</div>
-		    				</div>
-	    				</div>
-	    				<div class="item">
-		    				<div class="destination">
-		    					<a href="#" class="img d-flex justify-content-center align-items-center" style="background-image: url(images/destination-4.jpg);">
-		    						<div class="icon d-flex justify-content-center align-items-center">
-		    							<span class="icon-search2"></span>
-		    						</div>
-		    					</a>
-		    					<div class="text p-3">
-		    						<h3><a href="#">Lion, Singapore</a></h3>
-		    						<span class="listing">3 Listing</span>
-		    					</div>
-		    				</div>
-	    				</div>
-	    				<div class="item">
-		    				<div class="destination">
-		    					<a href="#" class="img d-flex justify-content-center align-items-center" style="background-image: url(images/destination-5.jpg);">
-		    						<div class="icon d-flex justify-content-center align-items-center">
-		    							<span class="icon-search2"></span>
-		    						</div>
-		    					</a>
-		    					<div class="text p-3">
-		    						<h3><a href="#">Australia</a></h3>
-		    						<span class="listing">3 Listing</span>
-		    					</div>
-		    				</div>
-	    				</div>
-	    				<div class="item">
-		    				<div class="destination">
-		    					<a href="#" class="img d-flex justify-content-center align-items-center" style="background-image: url(images/destination-6.jpg);">
-		    						<div class="icon d-flex justify-content-center align-items-center">
-		    							<span class="icon-search2"></span>
-		    						</div>
-		    					</a>
-		    					<div class="text p-3">
-		    						<h3><a href="#">Paris, Singapore</a></h3>
-		    						<span class="listing">3 Listing</span>
-		    					</div>
-		    				</div>
-	    				</div>
+    					
     				</div>
     			</div>
     		</div>
@@ -348,40 +273,7 @@
     					</div>
     				</div>
     			</div>
-    			<div class="col-sm col-md-6 col-lg ftco-animate">
-    				<div class="destination">
-    					<a href="#" class="img img-2 d-flex justify-content-center align-items-center" style="background-image: url(images/destination-5.jpg);">
-    						<div class="icon d-flex justify-content-center align-items-center">
-    							<span class="icon-search2"></span>
-    						</div>
-    					</a>
-    					<div class="text p-3">
-    						<div class="d-flex">
-    							<div class="one">
-		    						<h3><a href="#">Paris, Singapore</a></h3>
-		    						<p class="rate">
-		    							<i class="icon-star"></i>
-		    							<i class="icon-star"></i>
-		    							<i class="icon-star"></i>
-		    							<i class="icon-star"></i>
-		    							<i class="icon-star-o"></i>
-		    							<span>8 Rating</span>
-		    						</p>
-	    						</div>
-	    						<div class="two">
-	    							<span class="price">$200</span>
-    							</div>
-    						</div>
-    						<p>Far far away, behind the word mountains, far from the countries</p>
-    						<p class="days"><span>2 days 3 nights</span></p>
-    						<hr>
-    						<p class="bottom-area d-flex">
-    							<span><i class="icon-map-o"></i> San Franciso, CA</span> 
-    							<span class="ml-auto"><a href="#">Discover</a></span>
-    						</p>
-    					</div>
-    				</div>
-    			</div>
+    		
     		</div>
     	</div>
     </section>
@@ -530,39 +422,7 @@
     					</div>
     				</div>
     			</div>
-    			<div class="col-sm col-md-6 col-lg ftco-animate">
-    				<div class="destination">
-    					<a href="#" class="img img-2 d-flex justify-content-center align-items-center" style="background-image: url(images/hotel-5.jpg);">
-    						<div class="icon d-flex justify-content-center align-items-center">
-    							<span class="icon-search2"></span>
-    						</div>
-    					</a>
-    					<div class="text p-3">
-    						<div class="d-flex">
-    							<div class="one">
-		    						<h3><a href="#">Hotel, Singapore</a></h3>
-		    						<p class="rate">
-		    							<i class="icon-star"></i>
-		    							<i class="icon-star"></i>
-		    							<i class="icon-star"></i>
-		    							<i class="icon-star"></i>
-		    							<i class="icon-star-o"></i>
-		    							<span>8 Rating</span>
-		    						</p>
-	    						</div>
-	    						<div class="two">
-	    							<span class="price per-price">$40<br><small>/night</small></span>
-    							</div>
-    						</div>
-    						<p>Far far away, behind the word mountains, far from the countries</p>
-    						<hr>
-    						<p class="bottom-area d-flex">
-    							<span><i class="icon-map-o"></i> Singapore</span> 
-    							<span class="ml-auto"><a href="#">Book Now</a></span>
-    						</p>
-    					</div>
-    				</div>
-    			</div>
+    
     		</div>
     	</div>
     </section>
@@ -571,13 +431,14 @@
       <div class="container">
         <div class="row justify-content-start">
           <div class="col-md-5 heading-section ftco-animate">
-          	<span class="subheading">Best Directory Website</span>
+          	<span class="subheading">Best Explore Singapore Website</span>
             <h2 class="mb-4 pb-3"><strong>Why</strong> Choose Us?</h2>
-            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-            <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life.</p>
-            <p><a href="#" class="btn btn-primary btn-outline-primary mt-4 px-4 py-3">Read more</a></p>
+            <p>We have a huge list of to do list to ensure you fully enjoy your trip.</p>
+            <p>We do a breakdown how much to expect here!</p>
+           
           </div>
-					<div class="col-md-1"></div>
+		<div class="col-md-1"></div>
+
           <div class="col-md-6 heading-section ftco-animate">
           	<span class="subheading">Testimony</span>
             <h2 class="mb-4 pb-3"><strong>Our</strong> Guests Says</h2>
@@ -592,8 +453,8 @@
 		                    </span>
 		                  </div>
 		                  <div class="text ml-md-4">
-		                    <p class="mb-5">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-		                    <p class="name">Dennis Green</p>
+		                    <p class="mb-5">Best Sinapore Listing site ever! I love it!!! </p>
+		                    <p class="name">Wyman Lee</p>
 		                    <span class="position">Guest from Singapore</span>
 		                  </div>
 		                </div>
@@ -606,9 +467,9 @@
 		                    </span>
 		                  </div>
 		                  <div class="text ml-md-4">
-		                    <p class="mb-5">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-		                    <p class="name">Dennis Green</p>
-		                    <span class="position">Guest from London</span>
+		                    <p class="mb-5">I used the site to search fo attractions to do before I came. Not disappointed.</p>
+		                    <p class="name">Spongebob Square Pants</p>
+		                    <span class="position">Guest from Bikini Bottoms</span>
 		                  </div>
 		                </div>
 		              </div>
@@ -620,9 +481,9 @@
 		                    </span>
 		                  </div>
 		                  <div class="text ml-md-4">
-		                    <p class="mb-5">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-		                    <p class="name">Dennis Green</p>
-		                    <span class="position">Guest from Philippines</span>
+		                    <p class="mb-5">I love this site!</p>
+		                    <p class="name">Bob the Builder</p>
+		                    <span class="position">Guest from Building Town</span>
 		                  </div>
 		                </div>
 		              </div>

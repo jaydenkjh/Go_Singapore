@@ -69,7 +69,7 @@ namespace Go_Singapore.Views
             }
             else
             {
-                string url = "search.aspx?country=" + country + "&arr=" + dateArr + "&dep" + dateDep;
+                string url = "search.aspx?country=" + country + "&arr=" + dateArr + "&dep=" + dateDep;
                 Response.Redirect(url);
             }
         }

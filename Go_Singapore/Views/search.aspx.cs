@@ -13,32 +13,59 @@ namespace Go_Singapore.Views
     {
         APIManager apiManager = new APIManager();
         float sgdRate = 0;
-        
+        string countrySearch;
+        string arrvivalDate;
+        string departureDate;
+
+
         protected void Page_Load(object sender, EventArgs e)
         {
-            Country[] countries = apiManager.GetCountryList();
-           /* foreach (var country in countries)
+            updateQueryStrings();
+            string currency = "";
+            Country[] countryList = apiManager.GetCountryList();
+            foreach (var country in countryList)
             {
-
-                foreach (var currency in country.currencies)
+                if (country.name == countrySearch)
                 {
-                    ListItem li = new ListItem();
-                    li.Text = country.currencies[0].name + " " + country.currencies[0].symbol;
-                    li.Value = country.currencies[0].code;
-                    DDLCurrency.Items.Add(li);
+                    currency = country.currencies[0].code;
                 }
+                ListItem li = new ListItem();
+                li.Text = country.name;
+                li.Value = country.name;
                 // DDLCountry.Items.Add(li);
+                DDLCountry.Items.Add(li);
+            }
+
+            if (countrySearch == "Singapore")
+            {
+                currency = "SGD";
+            }
 
 
-            }*/
+
+            if (countrySearch != "")
+            {
+                DDLCountry.SelectedValue = countrySearch;
+            }
+
+            if (arrvivalDate != "")
+            {
+                txtArrival.Text = arrvivalDate;
+            }
+
+            if (departureDate != "")
+            {
+                txtDeparture.Text = departureDate;
+            }
+
 
             Rates rates = apiManager.GetCurrency();
-     
+
             foreach (PropertyDescriptor descriptor in TypeDescriptor.GetProperties(rates))
             {
                 string name = descriptor.Name;
                 object value = descriptor.GetValue(rates);
-                if (name=="SGD")
+                if (name == "SGD")
                 {
                     sgdRate = float.Parse(value.ToString());
                 }
@@ -49,14 +76,22 @@ namespace Go_Singapore.Views
                 //Console.WriteLine("{0}={1}", name, value);
             }
 
-            var item = CountryMatcher.GetDictionary();
-       
-
-      
             if (!IsPostBack)
             {
-                DDLCurrency.SelectedValue = "SGD";
-                updateCost(DDLCurrency.SelectedItem.Text,DDLStyle.Text, sgdRate);
+                try
+                {
+                    object item = rates.GetType().GetProperty(currency).GetValue(rates, null);
+                    DDLCurrency.SelectedValue = currency;
+                    updateCost(DDLCurrency.SelectedItem.Text, DDLStyle.Text, float.Parse(item.ToString()));
+                }
+                catch (Exception ex)
+                {
+                    DDLCurrency.SelectedValue = "SGD";
+                    updateCost(DDLCurrency.SelectedItem.Text, DDLStyle.Text, sgdRate);
+                }
+
+
+                
             }
         }
 
@@ -67,7 +102,7 @@ namespace Go_Singapore.Views
             {
                 if (cost.category_id == "0")
                 {
-                    lblCost6.Text = currencyName + " " + Math.Round(float.Parse(returnPrice(style, cost))/ sgdRate * rates, 2).ToString();
+                    lblCost6.Text = currencyName + " " + Math.Round(float.Parse(returnPrice(style, cost)) / sgdRate * rates, 2).ToString();
                 }
                 else if (cost.category_id == "1")
                 {
@@ -92,7 +127,23 @@ namespace Go_Singapore.Views
 
             }
         }
+        public void updateQueryStrings()
+        {
+            if (Request.QueryString["country"] != null)
+            {
+                countrySearch = Request.QueryString["country"];
+            }
 
+            if (Request.QueryString["arr"] != null)
+            {
+                arrvivalDate = Request.QueryString["arr"];
+            }
+
+            if (Request.QueryString["dep"] != null)
+            {
+                departureDate = Request.QueryString["dep"];
+            }
+        }
         public string returnPrice(string style, Datum cost)
         {
             if (style == "Budget")
@@ -114,7 +165,17 @@ namespace Go_Singapore.Views
             Rates rates = apiManager.GetCurrency();
             string style = DDLStyle.SelectedItem.Text;
             float rate = float.Parse(rates.GetType().GetProperty(DDLCurrency.SelectedItem.Text).GetValue(rates, null).ToString());
-            updateCost(DDLCurrency.SelectedItem.Text,style, rate);
+            updateCost(DDLCurrency.SelectedItem.Text, style, rate);
+        }
+
+        protected void btnSearch_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void DDLStyle_TextChanged(object sender, EventArgs e)
+        {
+            updateCost(DDLCurrency.SelectedItem.Text, DDLStyle.SelectedItem.Text, sgdRate);
         }
     }
 }
