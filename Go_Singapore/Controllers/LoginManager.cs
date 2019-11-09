@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 
@@ -24,15 +25,12 @@ namespace Go_Singapore.Controllers
                     if (login)
                     {
                         message = "1";
-                        
-
                     }
                     else
                         message = "Invalid Credentials";
                 }
                 else
                     message = "Invalid Credentials";
-
                 reader.Close();
                 reader.Dispose();
                 cmd.Dispose();
@@ -41,7 +39,6 @@ namespace Go_Singapore.Controllers
             catch (Exception ex)
             {
                 message = ex.Message.ToString() + "Error.";
-
             }
             return message;
         }
