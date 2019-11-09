@@ -76,6 +76,7 @@
     </Content>
     <Content Include="Views\about.aspx" />
     <Content Include="Views\admin.aspx" />
+    <Content Include="Views\Admin1.aspx" />
     <Content Include="Views\css\ajax-loader.gif" />
     <Content Include="Views\css\animate.css" />
     <Content Include="Views\css\aos.css" />
@@ -203,6 +204,13 @@
     </Compile>
     <Compile Include="Views\admin.aspx.designer.cs">
       <DependentUpon>admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Admin1.aspx.cs">
+      <DependentUpon>Admin1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Admin1.aspx.designer.cs">
+      <DependentUpon>Admin1.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>

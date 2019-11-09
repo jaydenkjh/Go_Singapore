@@ -3,8 +3,8 @@
     Admin Page
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="topHeader" runat="server">
-
+    <asp:GridView ID="GridView1" runat="server"></asp:GridView>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="homeContent" runat="server">
-
+    
 </asp:Content>

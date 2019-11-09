@@ -20,5 +20,11 @@ namespace Go_Singapore.Controllers
             ItineraryEntity ie = new ItineraryEntity();
             return ie.UpdateItinerary(sql);
         }
+
+        public DataTable GetAttractions()
+        {
+            ItineraryEntity ie = new ItineraryEntity();
+            return ie.GetAttractions();
+        }
     }
 }

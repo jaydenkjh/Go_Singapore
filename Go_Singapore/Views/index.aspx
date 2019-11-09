@@ -42,7 +42,7 @@
           </div>
      <style>
          .weatherBox{
-             height:200px;border:1px solid black;
+             height:230px;border:1px solid black;
          }
          .weatherBox i{
              font-size:120px;
@@ -82,11 +82,6 @@
                <asp:Label ID="lblDay5" CssClass="boxTitle" runat="server" Text="Day1"></asp:Label><br />
                <i ID="I5" class="" runat="server"></i><br />
                <asp:Label ID="lblCondition5" runat="server" Text="Condition1"></asp:Label>
-           </div>
-           <div class="weatherBox col-lg-2">
-               <asp:Label ID="lblDay6" CssClass="boxTitle" runat="server" Text="Day1"></asp:Label><br />
-               <i ID="I6" class="" runat="server"></i><br />
-               <asp:Label ID="lblCondition6" runat="server" Text="Condition1"></asp:Label>
            </div>
 
 

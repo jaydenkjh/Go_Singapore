@@ -17,6 +17,15 @@ namespace Go_Singapore.Models
             return dt;
         }
 
+        public DataTable GetAttractions()
+        {
+            DataTable dt = new DataTable();
+            string sql = "SELECT * FROM Attractions";
+            dt = Database.getTable(sql);
+            return dt;
+        }
+
+       
         public int UpdateItinerary(string sql)
         {
             return Database.ExecuteSQLCommand(sql); //return 0 if failed, return 1 if suggest
