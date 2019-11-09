@@ -15,19 +15,14 @@ namespace Go_Singapore.Models
         //Read data from database
         public static DataTable getTable(string sql)
         {
-            DataTable results = null;
+            DataTable results = new DataTable();
             SqlCommand cmd = new SqlCommand(sql, con);
             if (con.State == ConnectionState.Closed)
             {
                 con.Open();
             }
-            SqlDataReader reader = cmd.ExecuteReader();
-            if (reader.Read())
-            {
-                results = new DataTable();
-                results.Load(reader);
-            }
-            reader.Close();
+            SqlDataAdapter a = new SqlDataAdapter(cmd);
+            a.Fill(results);
             // con.Close();
 
             return results;

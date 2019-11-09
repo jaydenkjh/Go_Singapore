@@ -15,6 +15,24 @@ namespace Go_Singapore.Controllers
             return ie.GetItinearyList();
         }
 
+        public DataTable GetItinearyListById(string id)
+        {
+            ItineraryEntity ie = new ItineraryEntity();
+            return ie.GetItinearyListById(id);
+        }
+
+        public DataTable GetItineraryDoListById(string id)
+        {
+            ItineraryEntity ie = new ItineraryEntity();
+            return ie.GetItineraryDoListById(id);
+        }
+
+        public DataTable GetItinearyListOnly()
+        {
+            ItineraryEntity ie = new ItineraryEntity();
+            return ie.GetItinearyListOnly();
+        }
+
         public int UpdateItinerary(string sql)
         {
             ItineraryEntity ie = new ItineraryEntity();

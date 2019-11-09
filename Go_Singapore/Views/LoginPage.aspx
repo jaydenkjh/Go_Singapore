@@ -4,27 +4,27 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>Login V14</title>
+    <title>Login</title>
 	<meta charset="UTF-8"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1"/>
 <!--===============================================================================================-->	
 	<link rel="icon" type="image/png" href="loginassets/images/icons/favicon.ico"/>
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="loginasset/vendor/bootstrap/css/bootstrap.min.css"/>
+	<link rel="stylesheet" type="text/css" href="loginassets/vendor/bootstrap/css/bootstrap.min.css"/>
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="loginasset/fonts/font-awesome-4.7.0/css/font-awesome.min.css"/>
+	<link rel="stylesheet" type="text/css" href="loginassets/fonts/font-awesome-4.7.0/css/font-awesome.min.css"/>
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="loginasset/fonts/Linearicons-Free-v1.0.0/icon-font.min.css"/>
+	<link rel="stylesheet" type="text/css" href="loginassets/fonts/Linearicons-Free-v1.0.0/icon-font.min.css"/>
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="loginasset/vendor/animate/animate.css"/>
+	<link rel="stylesheet" type="text/css" href="loginassets/vendor/animate/animate.css"/>
 <!--===============================================================================================-->	
-	<link rel="stylesheet" type="text/css" href="loginasset/vendor/css-hamburgers/hamburgers.min.css"/>
+	<link rel="stylesheet" type="text/css" href="loginassets/vendor/css-hamburgers/hamburgers.min.css"/>
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="loginasset/vendor/animsition/css/animsition.min.css"/>
+	<link rel="stylesheet" type="text/css" href="loginassets/vendor/animsition/css/animsition.min.css"/>
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="loginasset/vendor/select2/select2.min.css"/>
+	<link rel="stylesheet" type="text/css" href="loginassets/vendor/select2/select2.min.css"/>
 <!--===============================================================================================-->	
-	<link rel="stylesheet" type="text/css" href="loginasset/vendor/daterangepicker/daterangepicker.css"/>
+	<link rel="stylesheet" type="text/css" href="loginassets/vendor/daterangepicker/daterangepicker.css"/>
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="loginassets/css/util.css"/>
 	<link rel="stylesheet" type="text/css" href="loginassets/css/main.css"/>
@@ -58,27 +58,22 @@
                         <asp:TextBox ID="txtPassword" TextMode="Password" placeholder="Password" CssClass="input100" runat="server" OnTextChanged="txtPassword_TextChanged"></asp:TextBox>
 						<span class="focus-input100"></span>
 					</div>
-					
-					<div class="flex-sb-m w-full p-b-48">
-						<div class="contact100-form-checkbox">
-							<input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me"/>
-							<label class="label-checkbox100" for="ckb1">
-								Remember me
-							</label>
-						</div>
-
-						<div>
-							<a href="#" class="txt3">
-								Forgot Password?
+					<br />
+                    <div>
+							<a href="Register.aspx" class="txt3">
+								Don't have an account? Register here
 							</a>
-						</div>
 					</div>
+                    <br />
+                    <br />
 
 					<div class="container-login100-form-btn">
 						<button class="login100-form-btn">
 							<asp:Button ID="btnLogin" CssClass="login100-form-btn" runat="server" Text="Login" OnClick="btnLogin_Click" />
 						</button>
 					</div>
+                    <br />
+                    <br />
                     <div>
                         <asp:Label ID="Label1" runat="server" Text="StatusCheck"></asp:Label>
                     </div>

@@ -74,6 +74,8 @@
     <Content Include="App_Data\GoSingaporeDB_log.ldf">
       <DependentUpon>GoSingaporeDB.mdf</DependentUpon>
     </Content>
+    <Content Include="Views\itineraries.aspx" />
+    <Content Include="Views\itinerary.aspx" />
     <Content Include="Views\LoginPage.aspx" />
     <Content Include="Views\about.aspx" />
     <Content Include="Views\css\ajax-loader.gif" />
@@ -194,6 +196,20 @@
     <Compile Include="Controllers\SuggestionManager.cs" />
     <Compile Include="Controllers\SystemManager.cs" />
     <Compile Include="Controllers\APIs.cs" />
+    <Compile Include="Views\itineraries.aspx.cs">
+      <DependentUpon>itineraries.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\itineraries.aspx.designer.cs">
+      <DependentUpon>itineraries.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\itinerary.aspx.cs">
+      <DependentUpon>itinerary.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\itinerary.aspx.designer.cs">
+      <DependentUpon>itinerary.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Views\LoginPage.aspx.cs">
       <DependentUpon>LoginPage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

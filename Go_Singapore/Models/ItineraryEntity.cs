@@ -17,6 +17,37 @@ namespace Go_Singapore.Models
             return dt;
         }
 
+        public DataTable GetItinearyListOnly()
+        {
+            DataTable dt = new DataTable();
+            string sql = "SELECT * FROM Itinerary";
+            dt = Database.getTable(sql);
+            return dt;
+        }
+
+        public DataTable GetItineraryDoListById(string itineraryId)
+        {
+            DataTable dt = new DataTable();
+            string sql = "SELECT * FROM ItineraryDoList, Attractions WHERE Attractions.Id=ItineraryDoList.attractionId AND" +
+                " itineraryId=" + itineraryId;
+            dt = Database.getTable(sql);
+            return dt;
+        }
+
+        public DataTable GetItinearyListById(string id)
+        {
+            DataTable dt = new DataTable();
+            string sql = "SELECT A.Id, A.name as attractionname, A.image, A.description, " +
+                "I.Id, I.name, I.total_days, " +
+                "IDL.itineraryId, IDL.attractionId, IDL.day, IDL.startTime, IDL.endTime " +
+                "FROM Itinerary AS I, ItineraryDoList AS IDL, Attractions AS A " +
+                "WHERE I.Id = IDL.itineraryId " +
+                "AND A.Id=IDL.attractionId";
+            sql += " AND I.Id=" + id;
+            dt = Database.getTable(sql);
+            return dt;
+        }
+
         public DataTable GetAttractions()
         {
             DataTable dt = new DataTable();
