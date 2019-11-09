@@ -12,13 +12,10 @@
                 <div class="fields d-block d-flex">
                   <div class="select-wrap one-third">
                     <div class="icon"><span class="ion-ios-arrow-down"></span></div>
-                      <asp:DropDownList ID="DDLCountry" CssClass="form-control" runat="server" placeholder="Keyword search"></asp:DropDownList>
-                  </div>
-				  <div class="select-wrap one-third">
-                      <asp:TextBox ID="txtArrival" runat="server" CssClass="form-control" placeholder="Arrvial Date (DD/MM/YY)"></asp:TextBox>
+                      <asp:DropDownList ID="DDLCurrency" CssClass="form-control" runat="server" ></asp:DropDownList>
                   </div>
 				 <div class="select-wrap one-third">
-                     <asp:TextBox ID="txtDeparture" runat="server" CssClass="form-control" placeholder="Departure Date (DD/MM/YY)"></asp:TextBox>
+                     <asp:TextBox ID="txtDays" runat="server" CssClass="form-control" placeholder="Total Days in Singapore" TextMode="Number"></asp:TextBox>
                   </div>
 				
                 </div>
@@ -27,7 +24,6 @@
               </div>
             </div>
              <asp:Label ID="lblError" runat="server" ForeColor="Red" Visible="False"></asp:Label><br />
-			<input type="checkbox" name="vehicle" value="Bike"> Direct Flight Only<br>
 			
 			<br><br>
     

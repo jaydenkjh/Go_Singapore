@@ -23,18 +23,10 @@ namespace Go_Singapore.Views
                 li.Text = country.name;
                 li.Value = country.name;
                 // DDLCountry.Items.Add(li);
-                DDLCountry.Items.Add(li);
+                DDLCurrency.Items.Add(li);
             }
 
-           /* dict = CountryMatcher.GetDictionary();
-            foreach (var country in dict)
-            {
-                ListItem li = new ListItem();
-                li.Text = country.Value;
-                li.Value = country.Value;
-                // DDLCountry.Items.Add(li);
-                DDLCountry.Items.Add(li);
-            }*/
+
 
             updateWeather();
             
@@ -42,27 +34,26 @@ namespace Go_Singapore.Views
 
         protected void btnSearch_Click(object sender, EventArgs e)
         {
-            DateTime dateArrival;
-            DateTime dateDeparture;
+            int day;
             
             bool error = false;
             string errorLine = "";
 
-            string country = DDLCountry.SelectedItem.Text;
-            string dateArr = txtArrival.Text;
-            string dateDep = txtDeparture.Text;
+            string country = DDLCurrency.SelectedItem.Text;
+            string days = txtDays.Text;
 
-            if (!DateTime.TryParse(dateArr, out dateArrival))
+            if (!int.TryParse(days, out day))
             {
                 error = true;
-                errorLine += "Please enter a valid Arrival Date. DD/MM/YY" + Environment.NewLine;
+                errorLine += "Please enter a valid number" + Environment.NewLine;
             }
-
-            if (!DateTime.TryParse(dateDep, out dateDeparture))
+            else if (day <= 0)
             {
                 error = true;
-                errorLine += "Please enter a valid Departure Date. DD/MM/YY" + Environment.NewLine;
+                errorLine += "Please enter a valid number" + Environment.NewLine;
             }
+
+            
 
             if (error)
             {
@@ -71,7 +62,7 @@ namespace Go_Singapore.Views
             }
             else
             {
-                string url = "search.aspx?country=" + country + "&arr=" + dateArr + "&dep=" + dateDep;
+                string url = "search.aspx?country=" + country + "&days=" + day;
                 Response.Redirect(url);
             }
         }

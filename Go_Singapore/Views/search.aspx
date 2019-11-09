@@ -54,11 +54,35 @@
          .weatherBox i{
              font-size:120px;
          }
+
          .weatherBox .boxTitle
          {
              font-size:15px;
              font-weight:bold;
          }
+         @media only screen and (max-width: 1300px) {
+         .weatherBox i {
+                 font-size:100px;
+             }
+         }
+         @media only screen and (max-width: 1000px) {
+             .weatherBox i {
+                     font-size:80px;
+                 }
+             .weatherBox .boxTitle
+             {
+                 font-size:11px;
+                 font-weight:bold;
+             }
+             .weatherBox{
+                 height:160px;
+              }
+         }
+
+
+         
+
+
          .weatherBox .cost
          {
              font-size:16px;
@@ -70,7 +94,7 @@
     
         <div class="row ftco-animate align-content-center text-center">
           <div class="col-md-12 heading-section ftco-animate">
-            <h2 class="mb-4"><strong>Average Cost</strong> a day</h2>
+            <h2 class="mb-4"><strong>Total </strong>Cost</h2>
           </div>
            <div class="weatherBox col-md-2">
                <p class="boxTitle">Accommodation</p>
@@ -102,6 +126,42 @@
                <i class="fas fa-money-bill-wave"></i><br />
                <asp:Label ID="lblCost6" CssClass="cost" runat="server" Text="Condition1"></asp:Label>
            </div>
+           <br /><br />
+            <div class="col-md-12 heading-section ftco-animate">
+            <h2 class="mb-4"><strong>Average Cost</strong> a day</h2>
+          </div>
+           <div class="weatherBox col-md-2">
+               <p class="boxTitle">Accommodation</p>
+               <i class="fas fa-home"></i><br />
+               <asp:Label ID="Label1" CssClass="cost" runat="server" Text="Condition1"></asp:Label>
+           </div>
+           <div class="weatherBox col-md-2">
+               <p class="boxTitle">Transportation</p>
+               <i class="fas fa-train"></i><br />
+               <asp:Label ID="Label2" CssClass="cost" runat="server" Text="Condition1"></asp:Label>
+           </div>
+           <div class="weatherBox col-md-2">
+               <p class="boxTitle">Food</p>
+               <i class="fas fa-utensils"></i><br />
+               <asp:Label ID="Label3" CssClass="cost" runat="server" Text="Condition1"></asp:Label>
+           </div>
+           <div class="weatherBox col-md-2">
+               <p class="boxTitle">Entertainment</p>
+               <i class="fas fa-ticket-alt"></i><br />
+               <asp:Label ID="Label4" CssClass="cost" runat="server" Text="Condition1"></asp:Label>
+           </div>
+           <div class="weatherBox col-md-2">
+               <p class="boxTitle">Water</p>
+               <i class="fas fa-water"></i><br />
+               <asp:Label ID="Label5" CssClass="cost" runat="server" Text="Condition1"></asp:Label>
+           </div>
+           <div class="weatherBox col-md-2">
+               <p class="boxTitle">Overall</p>
+               <i class="fas fa-money-bill-wave"></i><br />
+               <asp:Label ID="Label6" CssClass="cost" runat="server" Text="Condition1"></asp:Label>
+           </div>
+
+
        </div>
 
    

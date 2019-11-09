@@ -88,10 +88,7 @@ namespace Go_Singapore.Views
                 {
                     DDLCurrency.SelectedValue = "SGD";
                     updateCost(DDLCurrency.SelectedItem.Text, DDLStyle.Text, sgdRate);
-                }
-
-
-                
+                }  
             }
         }
 

@@ -13,31 +13,22 @@ namespace Go_Singapore.Views {
     public partial class index1 {
         
         /// <summary>
-        /// DDLCountry control.
+        /// DDLCurrency control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DDLCountry;
+        protected global::System.Web.UI.WebControls.DropDownList DDLCurrency;
         
         /// <summary>
-        /// txtArrival control.
+        /// txtDays control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtArrival;
-        
-        /// <summary>
-        /// txtDeparture control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtDeparture;
+        protected global::System.Web.UI.WebControls.TextBox txtDays;
         
         /// <summary>
         /// btnSearch control.
