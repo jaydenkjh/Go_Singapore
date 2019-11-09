@@ -76,8 +76,6 @@
     </Content>
     <Content Include="Views\LoginPage.aspx" />
     <Content Include="Views\about.aspx" />
-    <Content Include="Views\admin.aspx" />
-    <Content Include="Views\Admin1.aspx" />
     <Content Include="Views\css\ajax-loader.gif" />
     <Content Include="Views\css\animate.css" />
     <Content Include="Views\css\aos.css" />
@@ -216,20 +214,6 @@
     <Compile Include="Views\about.aspx.designer.cs">
       <DependentUpon>about.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Views\admin.aspx.cs">
-      <DependentUpon>admin.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Views\admin.aspx.designer.cs">
-      <DependentUpon>admin.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Admin1.aspx.cs">
-      <DependentUpon>Admin1.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Views\Admin1.aspx.designer.cs">
-      <DependentUpon>Admin1.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Views\index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -251,7 +235,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
-    <Content Include="Views\csc" />
     <Content Include="Views\css\.DS_Store" />
     <Content Include="Views\css\bootstrap\.DS_Store" />
     <Content Include="Views\css\css\.DS_Store" />

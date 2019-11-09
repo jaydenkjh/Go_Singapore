@@ -22,22 +22,13 @@ namespace Go_Singapore.Views {
         protected global::System.Web.UI.WebControls.DropDownList DDLCountry;
         
         /// <summary>
-        /// txtArrival control.
+        /// txtDays control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtArrival;
-        
-        /// <summary>
-        /// txtDeparture control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtDeparture;
+        protected global::System.Web.UI.WebControls.TextBox txtDays;
         
         /// <summary>
         /// btnSearch control.
@@ -130,57 +121,57 @@ namespace Go_Singapore.Views {
         protected global::System.Web.UI.WebControls.Label lblCost6;
         
         /// <summary>
-        /// Label1 control.
+        /// lblCost2_1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label1;
+        protected global::System.Web.UI.WebControls.Label lblCost2_1;
         
         /// <summary>
-        /// Label2 control.
+        /// lblCost2_2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label2;
+        protected global::System.Web.UI.WebControls.Label lblCost2_2;
         
         /// <summary>
-        /// Label3 control.
+        /// lblCost2_3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label3;
+        protected global::System.Web.UI.WebControls.Label lblCost2_3;
         
         /// <summary>
-        /// Label4 control.
+        /// lblCost2_4 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label4;
+        protected global::System.Web.UI.WebControls.Label lblCost2_4;
         
         /// <summary>
-        /// Label5 control.
+        /// lblCost2_5 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label5;
+        protected global::System.Web.UI.WebControls.Label lblCost2_5;
         
         /// <summary>
-        /// Label6 control.
+        /// lblCost2_6 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label6;
+        protected global::System.Web.UI.WebControls.Label lblCost2_6;
     }
 }

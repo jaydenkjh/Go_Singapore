@@ -14,8 +14,7 @@ namespace Go_Singapore.Views
         APIManager apiManager = new APIManager();
         float sgdRate = 0;
         string countrySearch;
-        string arrvivalDate;
-        string departureDate;
+        int day=1;
 
 
         protected void Page_Load(object sender, EventArgs e)
@@ -36,6 +35,7 @@ namespace Go_Singapore.Views
                 DDLCountry.Items.Add(li);
             }
 
+
             if (countrySearch == "Singapore")
             {
                 currency = "SGD";
@@ -48,16 +48,8 @@ namespace Go_Singapore.Views
                 DDLCountry.SelectedValue = countrySearch;
             }
 
-            if (arrvivalDate != "")
-            {
-                txtArrival.Text = arrvivalDate;
-            }
-
-            if (departureDate != "")
-            {
-                txtDeparture.Text = departureDate;
-            }
-
+            int day = 0; ;
+            
 
             Rates rates = apiManager.GetCurrency();
 
@@ -100,26 +92,32 @@ namespace Go_Singapore.Views
                 if (cost.category_id == "0")
                 {
                     lblCost6.Text = currencyName + " " + Math.Round(float.Parse(returnPrice(style, cost)) / sgdRate * rates, 2).ToString();
+                    lblCost2_6.Text = currencyName + " " + Math.Round(day * float.Parse(returnPrice(style, cost)) / sgdRate * rates, 2).ToString();
                 }
                 else if (cost.category_id == "1")
                 {
                     lblCost1.Text = currencyName + " " + Math.Round(float.Parse(returnPrice(style, cost)) / sgdRate * rates, 2).ToString();
+                    lblCost2_1.Text = currencyName + " " + Math.Round(day * float.Parse(returnPrice(style, cost)) / sgdRate * rates, 2).ToString();
                 }
                 else if (cost.category_id == "3")
                 {
                     lblCost2.Text = currencyName + " " + Math.Round(float.Parse(returnPrice(style, cost)) / sgdRate * rates, 2).ToString();
+                    lblCost2_2.Text = currencyName + " " + Math.Round(day * float.Parse(returnPrice(style, cost)) / sgdRate * rates, 2).ToString();
                 }
                 else if (cost.category_id == "4")
                 {
                     lblCost3.Text = currencyName + " " + Math.Round(float.Parse(returnPrice(style, cost)) / sgdRate * rates, 2).ToString();
+                    lblCost2_3.Text = currencyName + " " + Math.Round(day * float.Parse(returnPrice(style, cost)) / sgdRate * rates, 2).ToString();
                 }
                 else if (cost.category_id == "6")
                 {
                     lblCost4.Text = currencyName + " " + Math.Round(float.Parse(returnPrice(style, cost)) / sgdRate * rates, 2).ToString();
+                    lblCost2_4.Text = currencyName + " " + Math.Round(day * float.Parse(returnPrice(style, cost)) / sgdRate * rates, 2).ToString();
                 }
                 else if (cost.category_id == "5")
                 {
                     lblCost5.Text = currencyName + " " + Math.Round(float.Parse(returnPrice(style, cost)) / sgdRate * rates, 2).ToString();
+                    lblCost2_5.Text = currencyName + " " + Math.Round(day * float.Parse(returnPrice(style, cost)) / sgdRate * rates, 2).ToString();
                 }
 
             }
@@ -131,15 +129,26 @@ namespace Go_Singapore.Views
                 countrySearch = Request.QueryString["country"];
             }
 
-            if (Request.QueryString["arr"] != null)
+            if (Request.QueryString["days"] != null)
             {
-                arrvivalDate = Request.QueryString["arr"];
+                string days = Request.QueryString["days"];
+                if (days != "")
+                {
+                    txtDays.Text = days;
+                    if (!int.TryParse(days, out day))
+                    {
+                        day = 1;
+                    }
+                }
+                else
+                {
+                    day = 1;
+                }
             }
 
-            if (Request.QueryString["dep"] != null)
-            {
-                departureDate = Request.QueryString["dep"];
-            }
+
+
+
         }
         public string returnPrice(string style, Datum cost)
         {
@@ -167,7 +176,42 @@ namespace Go_Singapore.Views
 
         protected void btnSearch_Click(object sender, EventArgs e)
         {
+            int day;
 
+            bool error = false;
+            string errorLine = "";
+
+            string country = DDLCountry.SelectedItem.Text;
+            string days = txtDays.Text;
+
+            if (!int.TryParse(days, out day))
+            {
+                error = true;
+                errorLine += "Please enter a valid number" + Environment.NewLine;
+            }
+            else if (day <= 0)
+            {
+                error = true;
+                errorLine += "Please enter a valid number from the range of 1-365" + Environment.NewLine;
+            }
+            else if (day > 365)
+            {
+                error = true;
+                errorLine += "Please enter a valid number from the range of 1-365" + Environment.NewLine;
+            }
+
+
+
+            if (error)
+            {
+                lblError.Visible = true;
+                lblError.Text = errorLine;
+            }
+            else
+            {
+                string url = "search.aspx?country=" + country + "&days=" + day;
+                Response.Redirect(url);
+            }
         }
 
         protected void DDLStyle_TextChanged(object sender, EventArgs e)

@@ -9,13 +9,10 @@
                 <div class="fields d-block d-flex">
                   <div class="select-wrap one-third">
                     <div class="icon"><span class="ion-ios-arrow-down"></span></div>
-                      <asp:DropDownList ID="DDLCountry" CssClass="form-control" runat="server" placeholder="Keyword search"></asp:DropDownList>
-                  </div>
-				  <div class="select-wrap one-third">
-                      <asp:TextBox ID="txtArrival" runat="server" CssClass="form-control" placeholder="Arrvial Date (DD/MM/YY)"></asp:TextBox>
+                      <asp:DropDownList ID="DDLCountry" CssClass="form-control" runat="server" ></asp:DropDownList>
                   </div>
 				 <div class="select-wrap one-third">
-                     <asp:TextBox ID="txtDeparture" runat="server" CssClass="form-control" placeholder="Departure Date (DD/MM/YY)"></asp:TextBox>
+                     <asp:TextBox ID="txtDays" runat="server" CssClass="form-control" placeholder="Total Days in Singapore" TextMode="Number"></asp:TextBox>
                   </div>
 				
                 </div>
@@ -24,9 +21,7 @@
               </div>
             </div>
              <asp:Label ID="lblError" runat="server" ForeColor="Red" Visible="False"></asp:Label><br />
-			<input type="checkbox" name="vehicle" value="Bike"> Direct Flight Only<br>
 			
-			<br><br>
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="homeContent" runat="server">
@@ -94,7 +89,7 @@
     
         <div class="row ftco-animate align-content-center text-center">
           <div class="col-md-12 heading-section ftco-animate">
-            <h2 class="mb-4"><strong>Total </strong>Cost</h2>
+            <h2 class="mb-4"><strong>Average Cost </strong>a day</h2>
           </div>
            <div class="weatherBox col-md-2">
                <p class="boxTitle">Accommodation</p>
@@ -126,39 +121,45 @@
                <i class="fas fa-money-bill-wave"></i><br />
                <asp:Label ID="lblCost6" CssClass="cost" runat="server" Text="Condition1"></asp:Label>
            </div>
-           <br /><br />
+        </div>
+           <div style="height:100px;">
+               <br /><br /><br />
+
+           </div>
+    <div class="row ftco-animate align-content-center text-center">
             <div class="col-md-12 heading-section ftco-animate">
-            <h2 class="mb-4"><strong>Average Cost</strong> a day</h2>
+
+            <h2 class="mb-4"><strong>Total</strong> Cost</h2>
           </div>
            <div class="weatherBox col-md-2">
                <p class="boxTitle">Accommodation</p>
                <i class="fas fa-home"></i><br />
-               <asp:Label ID="Label1" CssClass="cost" runat="server" Text="Condition1"></asp:Label>
+               <asp:Label ID="lblCost2_1" CssClass="cost" runat="server" Text="Condition1"></asp:Label>
            </div>
            <div class="weatherBox col-md-2">
                <p class="boxTitle">Transportation</p>
                <i class="fas fa-train"></i><br />
-               <asp:Label ID="Label2" CssClass="cost" runat="server" Text="Condition1"></asp:Label>
+               <asp:Label ID="lblCost2_2" CssClass="cost" runat="server" Text="Condition1"></asp:Label>
            </div>
            <div class="weatherBox col-md-2">
                <p class="boxTitle">Food</p>
                <i class="fas fa-utensils"></i><br />
-               <asp:Label ID="Label3" CssClass="cost" runat="server" Text="Condition1"></asp:Label>
+               <asp:Label ID="lblCost2_3" CssClass="cost" runat="server" Text="Condition1"></asp:Label>
            </div>
            <div class="weatherBox col-md-2">
                <p class="boxTitle">Entertainment</p>
                <i class="fas fa-ticket-alt"></i><br />
-               <asp:Label ID="Label4" CssClass="cost" runat="server" Text="Condition1"></asp:Label>
+               <asp:Label ID="lblCost2_4" CssClass="cost" runat="server" Text="Condition1"></asp:Label>
            </div>
            <div class="weatherBox col-md-2">
                <p class="boxTitle">Water</p>
                <i class="fas fa-water"></i><br />
-               <asp:Label ID="Label5" CssClass="cost" runat="server" Text="Condition1"></asp:Label>
+               <asp:Label ID="lblCost2_5" CssClass="cost" runat="server" Text="Condition1"></asp:Label>
            </div>
            <div class="weatherBox col-md-2">
                <p class="boxTitle">Overall</p>
                <i class="fas fa-money-bill-wave"></i><br />
-               <asp:Label ID="Label6" CssClass="cost" runat="server" Text="Condition1"></asp:Label>
+               <asp:Label ID="lblCost2_6" CssClass="cost" runat="server" Text="Condition1"></asp:Label>
            </div>
 
 

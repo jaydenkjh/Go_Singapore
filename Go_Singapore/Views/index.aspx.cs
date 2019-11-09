@@ -50,10 +50,15 @@ namespace Go_Singapore.Views
             else if (day <= 0)
             {
                 error = true;
-                errorLine += "Please enter a valid number" + Environment.NewLine;
+                errorLine += "Please enter a valid number from the range of 1-365" + Environment.NewLine;
+            }
+            else if (day > 365)
+            {
+                error = true;
+                errorLine += "Please enter a valid number from the range of 1-365" + Environment.NewLine;
             }
 
-            
+
 
             if (error)
             {
