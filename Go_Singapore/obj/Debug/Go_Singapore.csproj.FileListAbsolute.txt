@@ -49,7 +49,6 @@ C:\Users\Jayden\Desktop\Go_Singapore\Go_Singapore\bin\roslyn\VBCSCompiler.exe
 C:\Users\Jayden\Desktop\Go_Singapore\Go_Singapore\bin\roslyn\VBCSCompiler.exe.config
 C:\Users\Jayden\Desktop\Go_Singapore\Go_Singapore\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\Users\Jayden\Desktop\Go_Singapore\Go_Singapore\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\Jayden\Desktop\Go_Singapore\Go_Singapore\obj\Debug\Go_Singapore.csprojAssemblyReference.cache
 C:\Users\Jayden\Desktop\Go_Singapore\Go_Singapore\obj\Debug\Go_Singapore.csproj.CopyComplete
 C:\Users\Jayden\Desktop\Go_Singapore\Go_Singapore\obj\Debug\Go_Singapore.dll
 C:\Users\Jayden\Desktop\Go_Singapore\Go_Singapore\obj\Debug\Go_Singapore.pdb
