@@ -19,7 +19,9 @@ namespace Go_Singapore.Views
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            updateQueryStrings();
+            
+                updateQueryStrings();
+            
             string currency = "";
             Country[] countryList = apiManager.GetCountryList();
             foreach (var country in countryList)
@@ -32,7 +34,7 @@ namespace Go_Singapore.Views
                 li.Text = country.name;
                 li.Value = country.name;
                 // DDLCountry.Items.Add(li);
-                DDLCountry.Items.Add(li);
+               // DDLCountry.Items.Add(li);
             }
 
 
@@ -43,10 +45,7 @@ namespace Go_Singapore.Views
 
 
 
-            if (countrySearch != "")
-            {
-                DDLCountry.SelectedValue = countrySearch;
-            }
+           
 
             int day = 0; ;
             
@@ -134,7 +133,7 @@ namespace Go_Singapore.Views
                 string days = Request.QueryString["days"];
                 if (days != "")
                 {
-                    txtDays.Text = days;
+                    //txtDays.Text = days;
                     if (!int.TryParse(days, out day))
                     {
                         day = 1;
@@ -176,42 +175,7 @@ namespace Go_Singapore.Views
 
         protected void btnSearch_Click(object sender, EventArgs e)
         {
-            int day;
-
-            bool error = false;
-            string errorLine = "";
-
-            string country = DDLCountry.SelectedItem.Text;
-            string days = txtDays.Text;
-
-            if (!int.TryParse(days, out day))
-            {
-                error = true;
-                errorLine += "Please enter a valid number" + Environment.NewLine;
-            }
-            else if (day <= 0)
-            {
-                error = true;
-                errorLine += "Please enter a valid number from the range of 1-365" + Environment.NewLine;
-            }
-            else if (day > 365)
-            {
-                error = true;
-                errorLine += "Please enter a valid number from the range of 1-365" + Environment.NewLine;
-            }
-
-
-
-            if (error)
-            {
-                lblError.Visible = true;
-                lblError.Text = errorLine;
-            }
-            else
-            {
-                string url = "search.aspx?country=" + country + "&days=" + day;
-                Response.Redirect(url);
-            }
+            
         }
 
         protected void DDLStyle_TextChanged(object sender, EventArgs e)

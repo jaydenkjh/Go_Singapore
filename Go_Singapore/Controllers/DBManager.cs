@@ -10,7 +10,7 @@ namespace Go_Singapore.Controllers
     public class DBManager // class containing all the methods to interact with the database
     {
         // change the connection string whenever the database's directory is moved
-        static string connectionString = "Data Source="+@"(LocalDB)\MSSQLLocalDB;AttachDbFilename="+@"|INSERT DATA DIRECTORY HERE|GoSingaporeDB.mdf"+";Integrated Security=True";
+        static string connectionString = @"Data Source = (LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\GoSingaporeDB.mdf;Integrated Security = True;";
         // Validate() takes in the email and password combination of the user, if they exist in the users table, the method will return true, else false
         public static bool Validate(string inputEmail, string inputPassword)
         {
@@ -46,7 +46,42 @@ namespace Go_Singapore.Controllers
             con.Close();
             return false;            
         }
-        
+
+        public static bool CheckExisting(string inputEmail, string inputUsername)
+        {
+            SqlConnection con = new SqlConnection(connectionString);
+            SqlCommand command;
+            string validateCommand = "SELECT COUNT(1) FROM users WHERE email = '" + inputEmail + "' OR username = '" + inputUsername + "'";
+            con.Open();
+
+            try
+            {
+                command = new SqlCommand(validateCommand, con);
+                int result = Convert.ToInt32(command.ExecuteScalar());
+                if (result > 0)
+                {
+                    command.Dispose();
+                    con.Close();
+                    return true;
+                }
+                else
+                {
+                    command.Dispose();
+                    con.Close();
+                    return false;
+                }
+
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("WARNING: " + e.ToString());
+                Console.WriteLine("Please try again ... ");
+            }
+
+            con.Close();
+            return false;
+        }
+
         // InsertEntry() takes in 4 string arguments and insert them into the "users" table
         public static void InsertEntry(string inputName, string inputUserName, string inputEmail, string inputPassword)
         {
@@ -56,22 +91,22 @@ namespace Go_Singapore.Controllers
             string insertCommand = "";
             con.Open();
 
-            try
-            {
-                insertCommand = "INSERT INTO Users (name, username, password, email) " +
-                    "VALUES '" + inputName + "','" + inputUserName + "','" + inputEmail + "','" + inputPassword + "')";
+          //  try
+          //  {
+                insertCommand = "INSERT INTO Users (name, username, email, password) " +
+                    "VALUES ('" + inputName + "','" + inputUserName + "','" + inputEmail + "','" + inputPassword + "')";
                 command = new SqlCommand(insertCommand, con);
                 da.InsertCommand = command;
                 da.InsertCommand.ExecuteNonQuery();
                 Console.WriteLine("Item successfully inserted");
                 da.Dispose();
                 command.Dispose();
-            }
-            catch(Exception e)
-            {
-                Console.WriteLine("WARNING: " + e.ToString());
-                Console.WriteLine("Please try again ... ");
-            }
+           // }
+          //  catch(Exception e)
+           // {
+           //     Console.WriteLine("WARNING: " + e.ToString());
+           //     Console.WriteLine("Please try again ... ");
+           // }
 
             con.Close();
         }

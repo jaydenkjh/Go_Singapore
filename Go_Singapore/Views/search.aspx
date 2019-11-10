@@ -4,22 +4,7 @@
 </asp:Content>
 
 <asp:Content ID="Content3" ContentPlaceHolderID="topHeader" runat="server">
-   <div class="block-17 my-4">
-              <div class="d-block d-flex">
-                <div class="fields d-block d-flex">
-                  <div class="select-wrap one-third">
-                    <div class="icon"><span class="ion-ios-arrow-down"></span></div>
-                      <asp:DropDownList ID="DDLCountry" CssClass="form-control" runat="server" ></asp:DropDownList>
-                  </div>
-				 <div class="select-wrap one-third">
-                     <asp:TextBox ID="txtDays" runat="server" CssClass="form-control" placeholder="Total Days in Singapore" TextMode="Number"></asp:TextBox>
-                  </div>
-				
-                </div>
-                  <asp:Button ID="btnSearch" CssClass="search-submit btn btn-primary" runat="server" Text="Search" OnClick="btnSearch_Click" />
-                		
-              </div>
-            </div>
+
              <asp:Label ID="lblError" runat="server" ForeColor="Red" Visible="False"></asp:Label><br />
 			
 </asp:Content>
