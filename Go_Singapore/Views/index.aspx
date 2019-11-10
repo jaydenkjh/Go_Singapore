@@ -99,8 +99,8 @@
     			<div class="col-md-12">
     				<div class="destination-slider owl-carousel ftco-animate">
                         <%
-                            SuggestionManager sm = new SuggestionManager();
-                            DataTable dt = sm.GetFullSuggestionList();
+                            ItineraryManager sm = new ItineraryManager();
+                            DataTable dt = sm.GetAttractions();
                             foreach(DataRow row in dt.Rows)
                             {
                                 Response.Write("<div class='item'><div class='destination'>");

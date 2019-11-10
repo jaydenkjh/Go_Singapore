@@ -123,12 +123,9 @@ namespace Go_Singapore.Views
             int image1;
             int image2;
             int image3;
-            int image4;
-
+            int image4; 
             try
             {
-
-
                 using (WebClient web = new WebClient())
                 {
 
