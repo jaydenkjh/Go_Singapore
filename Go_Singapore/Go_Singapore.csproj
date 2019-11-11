@@ -74,8 +74,18 @@
     <Content Include="App_Data\GoSingaporeDB_log.ldf">
       <DependentUpon>GoSingaporeDB.mdf</DependentUpon>
     </Content>
+    <Content Include="Views\css\leaflet-routing-machine.css" />
+    <Content Include="Views\css\leaflet.css" />
+    <Content Include="Views\images\layers-2x.png" />
+    <Content Include="Views\images\layers.png" />
+    <Content Include="Views\images\marker-icon-2x.png" />
+    <Content Include="Views\images\marker-icon.png" />
+    <Content Include="Views\images\marker-shadow.png" />
     <Content Include="Views\itineraries.aspx" />
     <Content Include="Views\itinerary.aspx" />
+    <Content Include="Views\js\jquery-3.3.1.min.js" />
+    <Content Include="Views\js\leaflet-routing-machine.js" />
+    <Content Include="Views\js\leaflet.js" />
     <Content Include="Views\LoginPage.aspx" />
     <Content Include="Views\about.aspx" />
     <Content Include="Views\css\ajax-loader.gif" />
