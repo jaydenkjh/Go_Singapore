@@ -97,11 +97,12 @@
      <asp:HiddenField ID="HiddenField1" runat="server" />
     <%
         Response.Write(HiddenField1.Value);%>
-<div id='mapdiv' style='height: 800px;'></div>
+<div id='mapdiv' style='height: 800px;' z-index: 5;></div>
 <script>
-        //co-ordinates from cs
-
-      
+    //co-ordinates from cs
+    var waypoint = [];
+    var lat;
+    var lon;
         L.Icon.Default.imagePath = "images/";
         var center = L.bounds([1.56073, 104.11475], [1.16, 103.502]).getCenter();
         var map = L.map('mapdiv').setView([center.x, center.y], 12);
@@ -119,43 +120,41 @@
         function getLocation() {
             if (navigator.geolocation) {
                 navigator.geolocation.getCurrentPosition(showPosition);
+                
             }
         }
 
         //show current position
-    var currLat;
-    var currLoc;
-
-    
 
     function showPosition(position) {
-            currLat = position.coords.latitude;
-               currLoc = position.coords.longitude;
-            marker = new L.Marker([position.coords.latitude, position.coords.longitude], { bounceOnAdd: false }).addTo(map);
-            marker.bindPopup("<b>You are here</b>").openPopup();
-            var popup = L.popup()
-                .setLatLng([position.coords.latitude, position.coords.longitude])
-                .setContent('You are here!')
-                .openOn(map);
-        }
+        marker = new L.Marker([position.coords.latitude, position.coords.longitude], { bounceOnAdd: false }).addTo(map);
+        marker.bindPopup("<b>You are here</b>").openPopup();
+        var popup = L.popup()
+            .setLatLng([position.coords.latitude, position.coords.longitude])
+            .setContent('You are here!')
+            .openOn(map);
+        window.lat = position.coords.latitude;
+        window.lon = position.coords.longitude;
+        //console.log(position.coords.latitude + "+" + position.coords.longitude);
+
+    }
+
+
+   // waypoint.push([lat, lon]);
+  //  alert(lat + 'and' + lon);
+
+    waypoint.push([1.3510525, 103.6812436]);
+    
     //show start and end markers
     $(document).ready(function () {
         getLocation();
         plotMarkers();
     });
 
-    
-    
-        var value = '<%=loc%>';
-     
-        value = JSON.parse(value);
-    var waypoint = [];
-    //getLocation();
-    getLocation();
-    waypoint.push([window.currLat, window.currLoc]);
-    //alert(navigator.geolocation.getCurrentPosition);
-        alert('wyman so gay' + currLat + ' ' + currLat);
-        var i;
+    var value = '<%=loc%>';
+    value = JSON.parse(value);
+    var i;
+        
         for (i = 0; i < value.length; i++) {
             waypoint.push([value[i].latitude, value[i].longitude]);
         }
@@ -171,9 +170,7 @@
                 count++;
             }
         
-        }
-   
-        
+    }
 
         // create a purple polyline from an array of LatLng points
         var latlngs = waypoint;
@@ -187,6 +184,6 @@
 
         // zoom the map to the polyline
         map.fitBounds(polyline.getBounds());
-       
+
     </script>
 </asp:Content>
