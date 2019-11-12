@@ -6,6 +6,13 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using Go_Singapore.Controllers;
 
+/*
+ * this class serves as the controller of the design object implemented in the LoginPage.aspx file
+ * the log in button calls the LoginProcess() method that is set in the LoginManager control class
+ * 
+ * @author: Irving
+ */
+
 namespace Go_Singapore.Views
 {
     public partial class WebForm1 : System.Web.UI.Page
