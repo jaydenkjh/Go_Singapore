@@ -5,6 +5,16 @@ using System.Web;
 using System.Data;
 using System.Data.SqlClient;
 
+/*
+ * this class implements the DBManager controller, which is responsible for information retrieval and insertion 
+ * to the user table contained within our .mdf database
+ * 
+ * the class has 5 different static functions: validate, CheckExisting, InsertEntry, DeleteEntry, and UpdatePassword
+ * do take note that not all the functions are implemented in the final products
+ * 
+ * @author: Irving
+ */
+
 namespace Go_Singapore.Controllers
 {
     public class DBManager // class containing all the methods to interact with the database
