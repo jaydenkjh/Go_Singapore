@@ -41,13 +41,14 @@ namespace Go_Singapore.Views
                 inputPassword.Equals("admin", StringComparison.InvariantCultureIgnoreCase))
             {
                 Session["admin"] = "true";
+                Session["username"] = "admin";
                 Response.Redirect("Index.aspx");
             }
             
             string loginStatus = LoginManager.LoginProcess(inputUsername, inputPassword);
             if(loginStatus == "1")
             {
-                Session["" + inputUsername] = "";
+                Session["username"] = inputUsername;
                 Response.Redirect("Index.aspx");
             }
             else

@@ -44,7 +44,22 @@
           <li class="nav-item active"><a href="index.aspx" class="nav-link">Home</a></li>
           <li class="nav-item"><a href="about.aspx" class="nav-link">About</a></li>
           <li class="nav-item"><a href="itineraries.aspx" class="nav-link">Itineraries</a></li>
-          <li class="nav-item cta"><a href="LoginPage.aspx" class="nav-link"><span>Login</span></a></li>
+            <%
+                if (Session["admin"]!=null)
+                {
+                    Response.Write("<li class='nav-item'><a href='admin.aspx' class='nav-link'>Admin</a></li>");
+                }
+
+                if (Session["username"]==null)
+                {
+                    Response.Write("<li class='nav-item cta'><a href='LoginPage.aspx' class='nav-link'><span>Login</span></a></li>");
+                }
+                else
+                {
+                    Response.Write("<li class='nav-item cta'><a href='Logout.aspx' class='nav-link'><span>Logout</span></a></li>");
+                }
+                %>
+          
         </ul>
       </div>
     </div>
