@@ -136,7 +136,7 @@
             .openOn(map);
         window.lat = position.coords.latitude;
         window.lon = position.coords.longitude;
-        //console.log(position.coords.latitude + "+" + position.coords.longitude);
+        console.log(position.coords.latitude + "+" + position.coords.longitude);
 
     }
     /*
@@ -153,7 +153,7 @@
    // waypoint.push([lat, lon]);
   //  alert(lat + 'and' + lon);
 
-    waypoint.push([1.3510525, 103.6812436]);
+    waypoint.push([1.3474651, 103.6819092]);
     
     //show start and end markers
     $(document).ready(function () {
