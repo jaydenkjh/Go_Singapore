@@ -70,6 +70,7 @@
             font-weight:bold;
             font-size:20px;
         }
+
     </style>
 
 
@@ -97,7 +98,7 @@
      <asp:HiddenField ID="HiddenField1" runat="server" />
     <%
         Response.Write(HiddenField1.Value);%>
-<div id='mapdiv' style='height: 800px;' z-index: 5;></div>
+    <div id='mapdiv' style='height: 800px;'></div>
 <script>
     //co-ordinates from cs
     var waypoint = [];
@@ -138,7 +139,16 @@
         //console.log(position.coords.latitude + "+" + position.coords.longitude);
 
     }
-
+    /*
+    showPosition(position)
+        .then(function (v) { // `delay` returns a promise
+            waypoint.push([v.lat, v.lon]);
+        })
+        .catch(function (v) {
+            // Or do something else if it is rejected 
+            // (it would not happen in this example, since `reject` is not called).
+        });
+*/
 
    // waypoint.push([lat, lon]);
   //  alert(lat + 'and' + lon);
