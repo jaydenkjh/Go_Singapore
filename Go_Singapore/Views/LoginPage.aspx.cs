@@ -40,7 +40,7 @@ namespace Go_Singapore.Views
             if (inputUsername.Equals("admin", StringComparison.InvariantCultureIgnoreCase) &&
                 inputPassword.Equals("admin", StringComparison.InvariantCultureIgnoreCase))
             {
-                Session["" + inputUsername] = "";
+                Session["admin"] = "true";
                 Response.Redirect("Index.aspx");
             }
             
