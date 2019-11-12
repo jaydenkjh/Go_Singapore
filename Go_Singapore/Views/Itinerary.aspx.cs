@@ -14,16 +14,7 @@ namespace Go_Singapore.Views
         public static string id;
         protected void Page_Load(object sender, EventArgs e)
         {
-            
 
-
-
-
-            
-
-            
-
-            
         }
     }
 }
