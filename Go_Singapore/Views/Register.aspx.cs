@@ -6,6 +6,15 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using Go_Singapore.Controllers;
 
+/* this class is responsible for the control logic behind the design elements in Register.aspx file
+ * the methods implemented within this controller are mostly called from the DBManager.cs control class
+ * 
+ * the functions used are:  DBManager.CheckExisting -> to ensure that the user has not already registered
+ *                          DBManager.InsertEntry -> to insert new entry to the user table in the .mdf file
+ *                          
+ * @author: Irving
+ */
+
 namespace Go_Singapore.Views
 {
     public partial class WebForm2 : System.Web.UI.Page

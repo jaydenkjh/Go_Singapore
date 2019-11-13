@@ -4,6 +4,13 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 
+/* 
+ * this class implements the LoginManager control class, which is responsible for one function only: 
+ * to verify user's log-in credentials. This function is called within the LoginPage.aspx.cs file
+ * 
+ * @author: Irving
+ */
+
 namespace Go_Singapore.Controllers
 {
     public class LoginManager

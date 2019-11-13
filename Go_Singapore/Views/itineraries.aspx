@@ -16,6 +16,7 @@
                     <h2><strong>Top</strong> Itineraries</h2>
                 </div>
             </div>
+            </div>
             <div class="row d-flex">
                 <%
                     ItineraryManager im = new ItineraryManager();

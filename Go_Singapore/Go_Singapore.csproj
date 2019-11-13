@@ -74,6 +74,7 @@
     <Content Include="App_Data\GoSingaporeDB_log.ldf">
       <DependentUpon>GoSingaporeDB.mdf</DependentUpon>
     </Content>
+    <Content Include="Views\admin.aspx" />
     <Content Include="Views\css\leaflet-routing-machine.css" />
     <Content Include="Views\css\leaflet.css" />
     <Content Include="Views\images\layers-2x.png" />
@@ -193,11 +194,13 @@
     <Content Include="Views\loginassets\fonts\Linearicons-Free-v1.0.0\WebFont\Linearicons-Free.svg" />
     <Content Include="Views\loginassets\fonts\montserrat\OFL.txt" />
     <Content Include="Views\loginassets\fonts\raleway\OFL.txt" />
+    <Content Include="Views\Logout.aspx" />
     <Content Include="Views\Register.aspx" />
     <Content Include="Views\search.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\AdminDataManager.cs" />
     <Compile Include="Controllers\APIManager.cs" />
     <Compile Include="Controllers\CountryMatcher.cs" />
     <Compile Include="Controllers\DBManager.cs" />
@@ -205,6 +208,13 @@
     <Compile Include="Controllers\ItineraryManager.cs" />
     <Compile Include="Controllers\LoginManager.cs" />
     <Compile Include="Controllers\APIs.cs" />
+    <Compile Include="Views\admin.aspx.cs">
+      <DependentUpon>admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\admin.aspx.designer.cs">
+      <DependentUpon>admin.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Views\itineraries.aspx.cs">
       <DependentUpon>itineraries.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -243,6 +253,13 @@
     </Compile>
     <Compile Include="Views\index.aspx.designer.cs">
       <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Logout.aspx.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Logout.aspx.designer.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\MasterPage.master.cs">
       <DependentUpon>MasterPage.master</DependentUpon>
