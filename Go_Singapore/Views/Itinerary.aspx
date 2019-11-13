@@ -20,16 +20,16 @@
         </asp:ScriptManager>
     <%
 
-        /* if (Request.QueryString["id"] == null)
+         if (Request.QueryString["id"] == null)
          {
              Response.Redirect("itineraries.aspx");
          }
          else
          {
              id = Request.QueryString["id"].ToString();
-         }*/
+         }
 
-        id = "1";
+       // id = "1";
 
 
         ItineraryManager im = new ItineraryManager();
