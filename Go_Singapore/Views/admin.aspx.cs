@@ -13,7 +13,7 @@ namespace Go_Singapore
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["admin"]==null)
+            if (Session["admin"] == null)
             {
                 Response.Redirect("index.aspx");
             }
@@ -45,18 +45,25 @@ namespace Go_Singapore
                 name = this.TextBox1.Text.ToString();
                 image = this.FileUpload1.FileName.ToString();
                 description = this.TextBox3.Text.ToString();
-            } catch (Exception lol)
+                if (name == "" || image == "" || description == "")
+                {
+                    doit = false;
+                }
+            }
+            catch (Exception lol)
             {
                 doit = false;
             }
-            if (doit) {
+            if (doit)
+            {
                 string path = "~/Views/images/attractions";
-                FileUpload1.SaveAs(Server.MapPath(path)+"/"+image);
+                FileUpload1.SaveAs(Server.MapPath(path) + "/" + image);
                 ADMgr.createAttraction(name, image, description);
                 DataTable dt = ADMgr.getAttractions();
                 GridView1.DataSource = dt;
                 GridView1.DataBind();
-            } else
+            }
+            else
             {
                 this.TextBox15.Text = "Error Encountered. Please try again.";
             }
@@ -72,7 +79,12 @@ namespace Go_Singapore
             {
                 name = this.TextBox4.Text.ToString();
                 total_days = Int32.Parse(this.TextBox5.Text);
-            } catch (Exception)
+                if (name == "" || total_days < 1)
+                {
+                    doit = false;
+                }
+            }
+            catch (Exception)
             {
                 doit = false;
             }
@@ -111,7 +123,12 @@ namespace Go_Singapore
                 {
                     throw new System.ArgumentException("Times invalid.", "original");
                 }
-            } catch (Exception)
+                if (itineraryID <= 0 || attractionID <= 0 || day <= 0)
+                {
+                    doit = false;
+                }
+            }
+            catch (Exception)
             {
                 doit = false;
             }
@@ -137,7 +154,12 @@ namespace Go_Singapore
             try
             {
                 attractionID = Int32.Parse(this.TextBox11.Text);
-            } catch (Exception)
+                if (attractionID < 1)
+                {
+                    doit = false;
+                }
+            }
+            catch (Exception)
             {
                 doit = false;
             }
@@ -155,7 +177,8 @@ namespace Go_Singapore
                 {
                     this.TextBox15.Text = "Deleted successfully.";
                 }
-            } else
+            }
+            else
             {
                 this.TextBox15.Text = "Error Encountered. Please try again.";
             }
@@ -170,7 +193,12 @@ namespace Go_Singapore
             try
             {
                 itineraryID = Int32.Parse(this.TextBox12.Text);
-            } catch (Exception)
+                if (itineraryID < 1)
+                {
+                    doit = false;
+                }
+            }
+            catch (Exception)
             {
                 doit = false;
             }
@@ -207,7 +235,12 @@ namespace Go_Singapore
             {
                 itineraryID = Int32.Parse(this.TextBox13.Text);
                 attractionID = Int32.Parse(this.TextBox14.Text);
-            } catch (Exception)
+                if (itineraryID < 1 || attractionID < 1)
+                {
+                    doit = false;
+                }
+            }
+            catch (Exception)
             {
                 doit = false;
             }
